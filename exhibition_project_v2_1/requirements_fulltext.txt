@@ -1,0 +1,296 @@
+1 
+ 
+ 
+ 
+ 
+SAMPLE 
+MALAYSIAN INSTITUTE OF INFORMATION TECHNOLOGY 
+ 
+ASSESSMENT BRIEF 
+ 
+COURSE DETAILS 
+CAMPUS MALAYSIAN INSTITUTE OF INFORMATION TECHNOLOGY 
+COURSE NAME MOBILE AND UBIQUITOUS COMPUTING 
+COURSE CODE ISB 26603 
+COURSE LEADER TS. NOR AZLINA ALI 
+LECTURER Dr. Chen Xinyuan 
+YEAR/SEMESTER Oct 2025 
+ 
+ASSESSMENT DETAILS 
+TITLE/NAME PROJECT 
+WEIGHT 20% 
+DATE/DEADLINE Week 13  
+OUTCOME(S) Design and develop a mobile application (P3, PLO8) 
+INSTRUCTIONS 1. Complete all the tasks given in a GROUP of TWO, THREE, or FOUR. 
+2. Total plagiarism is not allowed; you could refer to existing projects like 
+in Github, but must make major modifications on your own. If judged 
+plagiarism, your total marks could be deducted. 
+3. Mark deduction will be given for late submission. 
+DELIVERABLES Report and codes submission (VLE only): 
+1. Only the team leader submits to VLE before the due date. 
+ 
+2. Submissions include: 
+⚫ Source Code (.zip file): Compress the lib and assets folders, and the 
+pubspec.yaml file into a single .zip file. 
+⚫ Project Report (.pdf file): A comprehensive report detailing the project. 
+ 
+3. Naming Convention: Both .zip and .pdf files must be named as follows: 
+Project[Number, 1/2/3]_Lab[Number, 1-6]_LeaderName_LeaderStudentID, 
+(e.g., Project1_Lab3_JohnDoe_20231234.zip). 
+ 
+4. Repository: The code must be hosted on a version control platform like 
+GitHub. The repository link must be included in the project report and 
+accessible. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- PAGE BREAK ---
+
+2 
+ 
+Section A: Application Development (50%) 
+1. Project Overview 
+Create a comprehensive Android platform with Flutter  for managing trade shows and 
+exhibitions. This system facilitates the entire lifecycle, from Exhibition Organizers creating events and 
+managing floor plans, to Exhibitors discovering events, selecting and booking specific booths on a map, 
+and managing the ir participation. This project emphasizes spatial booking (booth selection via a 
+visual map) and multi-role interactions (besides administrators, also Organizer vs. Exhibitor). 
+ 
+2. Requirements for Pages & Features 
+ 
+(1) Guest Page:  
+⚫ Browse a list of published exhibition events. Each event card shows status (e.g., 
+Upcoming, Ongoing), , accessible to unauthenticated users (without logging in). 
+⚫ View exhibition details, including a read-only visual floor plan/map showing booth layout 
+and general information (e.g., "Booth A -12: Premium, 20sqm, $1500") , accessible to 
+unauthenticated users (without logging in). 
+⚫ Guide users to register/login to make a booking. 
+ 
+(2) Registration/Login Pages:  
+ Organizers, exhibitors and administrators must have separate login endpoints or a unified one 
+that can distinguish between these roles. 
+ 
+(3) Exhibitor Page (Post-Registration/Login): 
+Booth Discovery, Selection & Application Flow (Core):   
+1) Event Selection: Choose from a list of published exhibitions. 
+2) Interactive Floor Plan: A central feature. Exhibitors view a detailed, interactive floor map 
+of the exhibition. Booths are color -coded (e.g., Green=Available, Red=Booked, 
+Blue=Selected-by-me). 
+3) Booth Selection: Exhibitors can tap on an available booth on the map to view its details 
+(size, price, amenities like power, wifi) and add it to their selection cart. The system should 
+prevent selection of adjacent booths by competitors (a configurable rule by the organizer). 
+4) Booth Application Form: After selecting booths from the map, exhibitors fill out an 
+application form. This is not just a booking, but an application that requires providing: 
+⚫ Company Name & Description 
+⚫ Exhibit Profile/Description (what they plan to showcase) 
+⚫ event_startdate and event_enddate (the exhibition duration is fixed, these are for record). 
+⚫ Selection of additems (e.g., additional furniture, promotional spots, extended wifi). 
+5) Application Submission: Submits the application for organizer approval. The status 
+becomes "Pending Review". Receive notice after organizer's decision.  If rejected or 
+cancelled, could re-start application from Step. 1. 
+ 
+Booking/Application Management (Core):  
+⚫ View: "My Applications" screen lists all booth applications with statuses (Pending, 
+Approved, Rejected). 
+⚫ Update: Can modify application details (e.g., exhibit description, add -ons) only while 
+status is "Pending". 
+⚫ Delete: Users can cancel upcoming bookings with a confirmation dialog. 
+ 
+(4) Organizer Page (Core, Post-Login): 
+
+--- PAGE BREAK ---
+
+3 
+ 
+⚫ Exhibition Management: Full CRUD for their own exhibition events.  
+⚫ Booth Management: For their own exhibitions, create booth types, set prices, and manage 
+availability. 
+⚫ Approve/Reject/Cancel: Can approve, reject or withdraw the application ("Pending") , or 
+cancel a booking ("Approved"") subject to self-defined rules. Rejection and cancellation 
+should be with reasons. 
+ 
+(5) Administrator Page (Core, Post-Login): 
+⚫ Floor Plan Management: Upload/Manage floor plan images and digitally map booths (e.g., 
+define booth IDs, types, coordinates, and attributes on the image). 
+⚫ Exhibition Management: Full CRUD for all exhibition events. Key field: is_published 
+(boolean) to control visibility to organizers and exhibitors. 
+⚫ Booth Management: Create booth types, set prices, and manage availability  from the 
+system level. 
+⚫ Manage user accounts. 
+⚫ View and manage all exhibitor reservations. (View, Edit, Cancel any booking  with 
+appropriate processes). 
+ 
+3. Core Technical Requirement: 
+(1) Must provide basic search / filter functions; Features like payment, notice, and characteristics like 
+security, robustness, high performance, user friendliness will bring extra points. 
+(2) Must use no fewer than 3 third-party packages. These can cover areas such as: 
+⚫ Routing (e.g., go_router) 
+⚫ Network (e.g., http, dio) 
+⚫ Caching (e.g., hive, shared_preferences) 
+⚫ State Management (e.g., riverpod, flutter_bloc) 
+⚫ Security (e.g., flutter_secure_storage) 
+⚫ UI (e.g., flutter_svg, cached_network_image) 
+(3) Must use at least 1 database product, Firebase/MySQL/SQLite. Create a database named 
+exhibition_booth_management which has tables in accord with your app requirement. List all the 
+logic tables in your report, including fields, data type, data length, primary key/foreign key, etc (some 
+only for relational databases). 
+ 
+Section B: Project Report (30%) 
+ The project report should consist of the following components: 
+1. Cover page 
+2. Requirement Analysis 
+3. Adopted Software Life Cycle Model (e.g., Agile, Waterfall) 
+4. Module Division/Breakdown 
+5. Database Design (ER Diagram and Logical Tables) 
+6. Step-by-step User Guide with Screenshots 
+7. Repository Link 
+8. Plagiarism Statement with all members' signatures, Individual Task Breakdown & 
+Peer Evaluation for Group Work 
+9. References (Minimum 5, formatted in APA style) 
+ 
+Section C: Project Presentation (20%) 
+1. Presentation must be carried out by ALL members of the group highlighting the main 
+points of their project (Codes and Database). 
+
+--- PAGE BREAK ---
+
+4 
+ 
+2. You are required to run your apps and demonstrate how your apps work. 
+3. Presentation duration 10-15 minutes. 
+ 
+RUBRIC 
+Category Criteria Weight 
+App Development(50%)  
+Use of Packages (≥4) & Integration 20% 
+Architecture & State Management 15% 
+Core Feature Implementation (Booking Flow & Management) 10% 
+Code Readability & Documentation 5% 
+Report (30%) 
+Report Completeness (Req, Model, Modules, DB Design) 15% 
+Database Design (ERD & Logical Tables) 10% 
+References (APA Format, ≥5) 5% 
+Presentation (20%) Presentation & Demo (Clarity, Flow, Core Feature Showcase) 20% 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+GOOD LUCK 
+ 
+   
+The key to success is to focus on goals, not obstacles. 
+Great things never come from comfort ZONES. 
+ 
+
+--- PAGE BREAK ---
+
+5 
+ 
+Appendix 1: 
+ 
+ 
+ 
+MALAYSIAN INSTITUTE OF INFORMATION TECHNOLOGY 
+ 
+ISB26603 MOBILE AND UBIQUITOUS COMPUTING 
+OCTOBER 2025 
+ 
+ 
+Plagiarism Statement 
+ 
+ 
+Read, complete, and sign this statement to be submitted with the written report. 
+ 
+We confirm that the submitted works are all our work and are in our own words. 
+ 
+Name (Block Capital &  
+Alphabetical Order) Matric No. Group Alias 
+(Optional) Signature* 
+1.    
+2.    
+3.    
+ 
+Date:  
+
+
+--- PAGE BREAK ---
+
+6 
+ 
+Appendix 2: 
+ 
+ISB26603 MOBILE AND UBIQUITOUS COMPUTING 
+ 
+Peer Evaluation for Group Work 
+ 
+Leader Name: 
+Write the name of each of your group members in a separate column, indicate the extent to 
+which you agree with the statement on the left using scale 1 -4 (1=strongly disagree; 2 
+=disagree; 3=agree; 4=strongly agree). Total numbers in each column. 
+Evaluation Criteria 
+Group 
+Member 1 
+<Name> 
+Group 
+Member 2 
+<Name> 
+1.  Attends group meeting regularly and arrives 
+on time. 
+  
+2.  Contributes meaningfully to the group 
+discussion. 
+ 
+  
+3.  Completes group assignments on time. 
+ 
+ 
+  
+4.  Prepares work in a quality manner. 
+ 
+ 
+  
+5.  Demonstrates a cooperative and supportive 
+attitude. 
+  
+6.  Contributes significantly to the success of the 
+project. 
+  
+ TOTAL   
+ 
+ 

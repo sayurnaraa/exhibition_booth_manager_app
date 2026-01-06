@@ -1,0 +1,32 @@
+2. Total plagiarism is not allowed; you could refer to existing projects like
+3. Mark deduction will be given for late submission.
+1. Only the team leader submits to VLE before the due date.
+2. Submissions include:
+3. Naming Convention: Both .zip and .pdf files must be named as follows:
+4. Repository: The code must be hosted on a version control platform like
+1. Project Overview
+2. Requirements for Pages & Features
+1) Event Selection: Choose from a list of published exhibitions.
+2) Interactive Floor Plan: A central feature. Exhibitors view a detailed, interactive floor map
+3) Booth Selection: Exhibitors can tap on an available booth on the map to view its details
+4) Booth Application Form: After selecting booths from the map, exhibitors fill out an
+5) Application Submission: Submits the application for organizer approval. The status
+3. Core Technical Requirement:
+1. Cover page
+2. Requirement Analysis
+3. Adopted Software Life Cycle Model (e.g., Agile, Waterfall)
+4. Module Division/Breakdown
+5. Database Design (ER Diagram and Logical Tables)
+6. Step-by-step User Guide with Screenshots
+7. Repository Link
+8. Plagiarism Statement with all members' signatures, Individual Task Breakdown &
+9. References (Minimum 5, formatted in APA style)
+1. Presentation must be carried out by ALL members of the group highlighting the main
+2. You are required to run your apps and demonstrate how your apps work.
+3. Presentation duration 10-15 minutes.
+1. Attends group meeting regularly and arrives
+2. Contributes meaningfully to the group
+3. Completes group assignments on time.
+4. Prepares work in a quality manner.
+5. Demonstrates a cooperative and supportive
+6. Contributes significantly to the success of the
